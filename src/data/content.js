@@ -141,30 +141,13 @@ export function generateContent(serviceId, toneId = "professional") {
 }
 
 // ---------------------------------------------------------------------------
-// AI generator. Builds the template output first (the safe baseline), then asks
-// the /api/generate serverless function to rewrite it with AI in the chosen
-// tone. If the API isn't configured (no key) or anything fails, it quietly
-// returns the template version — so the app always works, with or without AI.
+// Async wrapper around the template generator (kept so the Post tool can show
+// its brief "Generating…" state). Returns the same template blocks.
 // ---------------------------------------------------------------------------
 export async function generateAIContent(serviceId, toneId = "professional") {
-  const blocks = generateContent(serviceId, toneId);
-  if (!blocks.length) return blocks;
-
-  const tone = (TONES.find((t) => t.id === toneId) || TONES[0]).label;
-  const service = SERVICE_COPY[serviceId]?.label || "website";
-
-  try {
-    const res = await fetch("/api/generate", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ kind: "post", service, tone, blocks }),
-    });
-    if (!res.ok) return blocks; // 503 (no key), 429, etc. → templates
-    const data = await res.json();
-    return Array.isArray(data.blocks) && data.blocks.length ? data.blocks : blocks;
-  } catch {
-    return blocks; // network/offline → templates
-  }
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(generateContent(serviceId, toneId)), 400);
+  });
 }
 
 // ---------------------------------------------------------------------------
@@ -190,23 +173,4 @@ export function generateFollowUp({ name = "there", service = "website", type = "
     thanks: `Hi ${n}, your ${service} is delivered — thank you so much for trusting me with it! 🙏 If you're happy with it, a quick referral or a kind word on Instagram would mean a lot. I'm here whenever you need updates.`,
   };
   return map[type] || map.first;
-}
-
-// AI version of the follow-up writer. Same graceful-fallback contract: it sends
-// the template draft to /api/generate and returns Claude's improved message, or
-// the original draft if AI isn't available.
-export async function generateAIFollowUp({ name = "there", service = "website", type = "first" }) {
-  const draft = generateFollowUp({ name, service, type });
-  try {
-    const res = await fetch("/api/generate", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ kind: "followup", name, service, type, draft }),
-    });
-    if (!res.ok) return draft;
-    const data = await res.json();
-    return typeof data.message === "string" && data.message.trim() ? data.message : draft;
-  } catch {
-    return draft;
-  }
 }
