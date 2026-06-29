@@ -5,7 +5,6 @@ import PortfolioGrid from "../sections/PortfolioGrid";
 import ContactSection from "../sections/ContactSection";
 import { Process, Testimonials, FAQ } from "../sections/Extras";
 import ScrollVelocity from "../components/ScrollVelocity";
-import ModelShowcase from "../sections/ModelShowcase";
 
 export default function Home() {
   return (
@@ -27,7 +26,6 @@ export default function Home() {
       <ServicesGrid />
       <PricingCards />
       <PortfolioGrid />
-      <ModelShowcase />
       <Process />
       <Testimonials />
       <FAQ />
