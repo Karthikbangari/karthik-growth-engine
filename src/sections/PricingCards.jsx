@@ -8,9 +8,9 @@ export default function PricingCards() {
   return (
     <section id="pricing" className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
       <SectionHeading
-        eyebrow="Simple pricing"
-        title="Packages for every budget"
-        subtitle="Transparent starting prices. Use the price calculator in Tools for an exact estimate."
+        eyebrow="Packages"
+        title="Pick your perfect package"
+        subtitle="Choose the option that fits you best — message me on WhatsApp and I'll share a custom quote."
       />
 
       <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -31,7 +31,9 @@ export default function PricingCards() {
               <h3 className={`font-grotesk text-sm font-semibold uppercase tracking-wide ${p.highlight ? "text-olive-200" : "text-olive-700"}`}>
                 {p.name}
               </h3>
-              <p className="mt-3 font-display text-4xl font-bold">{p.price}</p>
+              <p className={`mt-3 font-display text-3xl font-bold ${p.highlight ? "text-sand" : "text-ink"}`}>
+                Custom quote
+              </p>
               <p className={`mt-2 text-sm ${p.highlight ? "text-sand/70" : "text-ink/60"}`}>{p.blurb}</p>
 
               <ul className="mt-6 flex-1 space-y-3 text-sm">
@@ -44,7 +46,7 @@ export default function PricingCards() {
               </ul>
 
               <a
-                href={waLink(`Hi Karthik, I'm interested in the ${p.name} package (${p.price}). Please share details.`)}
+                href={waLink(`Hi Karthik, I'm interested in the ${p.name} package. Please share details and pricing.`)}
                 target="_blank"
                 rel="noreferrer"
                 className={`mt-7 ${p.highlight ? "btn-wa" : "btn-primary"} w-full`}

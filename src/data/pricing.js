@@ -3,7 +3,6 @@ export const PACKAGES = [
   {
     id: "basic",
     name: "Basic",
-    price: "₹1,999",
     blurb: "Perfect for a simple, clean portfolio.",
     features: [
       "1–3 page website",
@@ -17,7 +16,6 @@ export const PACKAGES = [
   {
     id: "premium",
     name: "Premium",
-    price: "₹4,999",
     blurb: "More pages, gallery and smooth animations.",
     features: [
       "Up to 6 pages",
@@ -31,7 +29,6 @@ export const PACKAGES = [
   {
     id: "royal",
     name: "Royal",
-    price: "₹7,999+",
     blurb: "The full luxury treatment for weddings & business.",
     features: [
       "Unlimited sections",
