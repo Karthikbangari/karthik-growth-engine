@@ -1,14 +1,12 @@
 import { useState } from "react";
-import { Wand2, Calculator, Link2, MessageSquareReply } from "lucide-react";
+import { Wand2, Link2, MessageSquareReply } from "lucide-react";
 import PostGenerator from "../tools/PostGenerator";
-import PriceCalculator from "../tools/PriceCalculator";
 import WhatsAppGenerator from "../tools/WhatsAppGenerator";
 import FollowUpGenerator from "../tools/FollowUpGenerator";
 import SectionHeading from "../components/SectionHeading";
 
 const TABS = [
   { id: "post", label: "Post Generator", icon: Wand2, Comp: PostGenerator },
-  { id: "price", label: "Price Calculator", icon: Calculator, Comp: PriceCalculator },
   { id: "wa", label: "WhatsApp Link", icon: Link2, Comp: WhatsAppGenerator },
   { id: "follow", label: "Follow-up", icon: MessageSquareReply, Comp: FollowUpGenerator },
 ];
@@ -22,7 +20,7 @@ export default function ToolsPage() {
       <SectionHeading
         eyebrow="Your growth toolkit"
         title="Tools to win customers"
-        subtitle="Create promotion content, quote prices, build WhatsApp links and write follow-ups — all in one place."
+        subtitle="Create promotion content, build WhatsApp links and write follow-ups — all in one place."
       />
 
       <div className="mt-10 flex flex-wrap justify-center gap-2">

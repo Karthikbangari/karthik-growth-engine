@@ -40,26 +40,3 @@ export const PACKAGES = [
     highlight: false,
   },
 ];
-
-// ---------------------------------------------------------------------------
-// Price Calculator configuration. Edit numbers here to retune pricing.
-// All amounts are in INR.
-// ---------------------------------------------------------------------------
-export const CALC = {
-  base: {
-    "career-portfolio": 1999,
-    "wedding-memory": 7999,
-    "photo-memory": 2999,
-    "business-website": 5999,
-    "landing-page": 2999,
-    "instagram-poster": 499,
-  },
-  perExtraPage: 600, // beyond the first page
-  addOns: {
-    gallery: 800,
-    video: 1200,
-    animation: 1000,
-    premiumDesign: 1500,
-  },
-  urgentMultiplier: 1.25, // +25% for urgent delivery
-};

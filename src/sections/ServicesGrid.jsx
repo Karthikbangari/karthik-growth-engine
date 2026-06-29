@@ -21,11 +21,10 @@ export default function ServicesGrid({ heading = true }) {
           return (
             <Reveal key={s.id} delay={i * 0.05}>
               <div className="glass glass-hover group flex h-full flex-col p-6">
-                <div className="flex items-center justify-between">
+                <div className="flex items-center">
                   <span className="grid h-12 w-12 place-items-center rounded-xl bg-olive/12 text-olive-700 transition-transform duration-300 ease-out group-hover:scale-110 group-hover:-rotate-3">
                     <Icon size={22} />
                   </span>
-                  <span className="font-grotesk text-xs font-semibold text-ink/50">from {s.from}</span>
                 </div>
                 <h3 className="mt-4 font-display text-xl font-bold text-ink">{s.name}</h3>
                 <p className="mt-1.5 text-sm text-ink/65">{s.short}</p>

@@ -59,7 +59,7 @@ export default function Hero() {
               View services <ArrowRight size={16} />
             </Link>
             <Link to="/tools" className="btn-dark w-full sm:w-auto">
-              Get price
+              Free tools
             </Link>
           </div>
         </motion.div>
@@ -76,7 +76,7 @@ export default function Hero() {
         >
           {[
             { k: "Delivered in", v: "3–5 days", d: "Fast turnaround, no fuss." },
-            { k: "Starting at", v: "₹1,999", d: "Packages for every budget." },
+            { k: "Pricing", v: "Tailored", d: "A custom quote, just for you." },
             { k: "Made for", v: "Mobile-first", d: "Looks great on every screen." },
           ].map((c, i) => (
             <motion.div
