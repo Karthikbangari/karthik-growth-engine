@@ -7,11 +7,12 @@
   display: flex;
   white-space: nowrap;
   text-align: center;
-  /* Match the site's display/grotesk typography instead of generic sans */
+  /* Match the site's grotesk typography; refined uppercase accent, not a banner */
   font-family: "Space Grotesk", system-ui, sans-serif;
-  font-size: 1.75rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
 }
 
 .scroller span {
@@ -20,7 +21,7 @@
 
 @media (min-width: 768px) {
   .scroller {
-    font-size: 3rem;
-    line-height: 3.5rem;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
   }
 }

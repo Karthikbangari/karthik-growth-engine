@@ -12,14 +12,14 @@ export default function Home() {
       <Hero />
 
       {/* Scrolling brand marquee — reacts to scroll speed */}
-      <div className="border-y border-olive/15 bg-olive/[0.06] py-5 sm:py-7">
+      <div className="border-y border-olive/15 bg-olive/[0.05] py-3.5 sm:py-4">
         <ScrollVelocity
           texts={[
             "Portfolio · Wedding · Business · Landing Pages ·",
             "Mobile-first · Fast delivery · Made just for you ·",
           ]}
-          velocity={45}
-          className="text-olive-600/80"
+          velocity={40}
+          className="text-olive-700/70"
         />
       </div>
 
