@@ -4,37 +4,34 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Theme: "Ocean Depths" — calm maritime teal + navy on off-white.
-        // NOTE: the `olive` key is kept for backwards-compat with existing
-        // class names; it now holds the teal accent scale.
-        sand: "#F1FAEE", // page background (off-white)
-        sand2: "#DCEFEF", // secondary background (light aqua tint)
-        ink: "#1A2332", // primary text (navy)
-        slate: "#16222E", // dark cards (deep navy)
+        // Brand palette (from the brief)
+        sand: "#F4F1E8", // page background
+        sand2: "#E8E2D0", // secondary background
+        ink: "#111827", // primary text
+        slate: "#1F2937", // dark cards
         olive: {
-          DEFAULT: "#2D8B8B", // accent (teal)
-          50: "#ECF7F7",
-          100: "#D2ECEC",
-          200: "#A8DADC",
-          300: "#7BC6C7",
-          400: "#4FAEAF",
-          500: "#2D8B8B",
-          600: "#246F70",
-          700: "#1E5859",
-          800: "#1A4445",
-          900: "#163738",
+          DEFAULT: "#6B7A3A", // accent
+          50: "#F3F5EC",
+          100: "#E6EAD6",
+          200: "#CFD7AE",
+          300: "#B2BE80",
+          400: "#94A258",
+          500: "#6B7A3A",
+          600: "#566230",
+          700: "#434C26",
+          800: "#33391E",
+          900: "#262B17",
         },
       },
       fontFamily: {
-        // Ocean Depths uses a clean sans for headings
-        display: ['"Space Grotesk"', "sans-serif"],
+        display: ['"Playfair Display"', "serif"],
         grotesk: ['"Space Grotesk"', "sans-serif"],
         body: ['"Inter"', "system-ui", "sans-serif"],
       },
       boxShadow: {
         soft: "0 10px 40px -12px rgba(31, 41, 55, 0.18)",
         glass: "0 8px 32px rgba(31, 41, 55, 0.10)",
-        olive: "0 12px 30px -10px rgba(45, 139, 139, 0.42)",
+        olive: "0 12px 30px -10px rgba(107, 122, 58, 0.45)",
         // Layered shadows read as real depth, not a flat drop.
         card: "0 1px 2px rgba(31, 41, 55, 0.04), 0 12px 28px -14px rgba(31, 41, 55, 0.22)",
         lift: "0 2px 6px rgba(31, 41, 55, 0.06), 0 22px 48px -20px rgba(31, 41, 55, 0.32)",
