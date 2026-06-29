@@ -3,6 +3,7 @@ import { SERVICES } from "../data/services";
 import { waLink, serviceMessage } from "../lib/whatsapp";
 import SectionHeading from "../components/SectionHeading";
 import Reveal from "../components/Reveal";
+import Tilt from "../components/Tilt";
 
 export default function ServicesGrid({ heading = true }) {
   return (
@@ -19,7 +20,8 @@ export default function ServicesGrid({ heading = true }) {
         {SERVICES.map((s, i) => {
           const Icon = s.icon;
           return (
-            <Reveal key={s.id} delay={i * 0.05}>
+            <Reveal key={s.id} delay={i * 0.05} className="h-full">
+              <Tilt max={8} glare className="h-full rounded-2xl">
               <div className="glass glass-hover group flex h-full flex-col p-6">
                 <div className="flex items-center">
                   <span className="grid h-12 w-12 place-items-center rounded-xl bg-olive/12 text-olive-700 transition-transform duration-300 ease-out group-hover:scale-110 group-hover:-rotate-3">
@@ -44,6 +46,7 @@ export default function ServicesGrid({ heading = true }) {
                   Enquire on WhatsApp <ArrowUpRight size={16} />
                 </a>
               </div>
+              </Tilt>
             </Reveal>
           );
         })}

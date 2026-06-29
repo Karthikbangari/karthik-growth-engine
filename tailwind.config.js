@@ -22,6 +22,13 @@ export default {
           800: "#33391E",
           900: "#262B17",
         },
+        // Champagne gold — premium accent paired with the olive + cream.
+        gold: {
+          DEFAULT: "#BF9D5E",
+          light: "#E8D8B0",
+          600: "#A6884B",
+          700: "#8A6F3A",
+        },
       },
       fontFamily: {
         display: ['"Playfair Display"', "serif"],
@@ -32,9 +39,12 @@ export default {
         soft: "0 10px 40px -12px rgba(31, 41, 55, 0.18)",
         glass: "0 8px 32px rgba(31, 41, 55, 0.10)",
         olive: "0 12px 30px -10px rgba(107, 122, 58, 0.45)",
+        gold: "0 12px 30px -10px rgba(191, 157, 94, 0.45)",
         // Layered shadows read as real depth, not a flat drop.
         card: "0 1px 2px rgba(31, 41, 55, 0.04), 0 12px 28px -14px rgba(31, 41, 55, 0.22)",
         lift: "0 2px 6px rgba(31, 41, 55, 0.06), 0 22px 48px -20px rgba(31, 41, 55, 0.32)",
+        // Deeper float shadow for the interactive 3D mockup
+        float3d: "0 30px 60px -24px rgba(31, 41, 55, 0.4), 0 8px 24px -12px rgba(107,122,58,0.25)",
       },
       backgroundImage: {
         "grain":

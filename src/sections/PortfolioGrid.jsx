@@ -2,6 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 import { PORTFOLIO } from "../data/portfolio";
 import SectionHeading from "../components/SectionHeading";
 import Reveal from "../components/Reveal";
+import Tilt from "../components/Tilt";
 
 export default function PortfolioGrid() {
   return (
@@ -34,12 +35,16 @@ export default function PortfolioGrid() {
           );
 
           return (
-            <Reveal key={item.id} delay={i * 0.05}>
-              {item.link ? (
-                <a href={item.link} target="_blank" rel="noreferrer">{Card}</a>
-              ) : (
-                Card
-              )}
+            <Reveal key={item.id} delay={i * 0.05} className="h-full">
+              <Tilt max={8} glare className="h-full rounded-2xl">
+                {item.link ? (
+                  <a href={item.link} target="_blank" rel="noreferrer" className="block h-full">
+                    {Card}
+                  </a>
+                ) : (
+                  Card
+                )}
+              </Tilt>
             </Reveal>
           );
         })}
