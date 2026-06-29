@@ -142,7 +142,7 @@ export function generateContent(serviceId, toneId = "professional") {
 
 // ---------------------------------------------------------------------------
 // AI generator. Builds the template output first (the safe baseline), then asks
-// the /api/generate serverless function to rewrite it with Claude in the chosen
+// the /api/generate serverless function to rewrite it with AI in the chosen
 // tone. If the API isn't configured (no key) or anything fails, it quietly
 // returns the template version — so the app always works, with or without AI.
 // ---------------------------------------------------------------------------
