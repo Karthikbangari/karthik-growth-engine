@@ -27,7 +27,7 @@ export default function Hero() {
               <svg className="absolute -bottom-2 left-0 w-full" height="10" viewBox="0 0 200 10" preserveAspectRatio="none">
                 <path
                   d="M2 7 Q100 0 198 6"
-                  stroke="#6B7A3A"
+                  stroke="#2D8B8B"
                   strokeWidth="3"
                   fill="none"
                   strokeLinecap="round"
