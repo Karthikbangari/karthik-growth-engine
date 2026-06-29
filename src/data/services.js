@@ -1,63 +1,60 @@
 import {
   Briefcase,
-  Building2,
   Heart,
   Images,
+  Building2,
   Rocket,
   Megaphone,
-  Boxes,
 } from "lucide-react";
 
-// Services offered to customers (Karthik also builds websites for clients).
+// Each service has an `id` used across the tools (post generator, calculator, etc.)
 export const SERVICES = [
   {
     id: "career-portfolio",
     name: "Career Portfolio Website",
     icon: Briefcase,
-    description: "A clean, modern personal site that helps you stand out to recruiters.",
-    features: ["About + experience", "Projects gallery", "Resume download", "WhatsApp contact"],
-  },
-  {
-    id: "business-website",
-    name: "Business Website",
-    icon: Building2,
-    description: "A professional presence that builds trust and brings in enquiries.",
-    features: ["Services", "Enquiry form", "Google Maps", "Lead button"],
+    short: "Stand out to recruiters with a clean, modern personal site.",
+    points: ["About + experience", "Projects gallery", "Resume download", "WhatsApp contact"],
   },
   {
     id: "wedding-memory",
     name: "Wedding Memory Website",
     icon: Heart,
-    description: "A beautiful site to relive and share your big day with everyone you love.",
-    features: ["Couple intro", "Photo & video gallery", "Event details", "Private share link"],
+    short: "A beautiful personal site to relive and share your big day.",
+    points: ["Couple intro", "Photo & video gallery", "Event details", "Share link"],
   },
   {
     id: "photo-memory",
     name: "Photo Memory Website",
     icon: Images,
-    description: "Turn your favourite moments into a private, organised online gallery.",
-    features: ["Albums", "Slideshows", "Captions", "Private sharing"],
+    short: "Turn your favourite moments into a private online gallery.",
+    points: ["Albums", "Slideshows", "Captions", "Private sharing"],
+  },
+  {
+    id: "business-website",
+    name: "Business Website",
+    icon: Building2,
+    short: "A professional presence that builds trust and brings enquiries.",
+    points: ["Services", "Enquiry form", "Google Maps", "WhatsApp lead button"],
   },
   {
     id: "landing-page",
     name: "Marketing Landing Page",
     icon: Rocket,
-    description: "A single high-converting page built to capture leads from your ads.",
-    features: ["Strong headline", "Offer block", "Lead form", "Fast loading"],
+    short: "A single high-converting page built to capture leads.",
+    points: ["Strong headline", "Offer block", "Lead form", "Fast loading"],
   },
   {
     id: "instagram-poster",
     name: "Instagram Promotion Poster",
     icon: Megaphone,
-    description: "Eye-catching poster text and layout to promote any offer beautifully.",
-    features: ["Story + post sizes", "Punchy copy", "Hashtags", "Clear CTA"],
-  },
-  {
-    id: "3d-portfolio",
-    name: "3D Interactive Portfolio Website",
-    icon: Boxes,
-    description: "A premium, cinematic 3D portfolio — exactly like the site you're viewing now.",
-    features: ["Realistic 3D hero", "Smooth animations", "Glassmorphism UI", "Fully responsive"],
-    featured: true,
+    short: "Eye-catching poster text and layout to promote any service.",
+    points: ["Story + post size", "Offer copy", "Hashtags", "Call to action"],
   },
 ];
+
+export const SERVICE_OPTIONS = SERVICES.map((s) => ({ id: s.id, name: s.name }));
+
+export function serviceById(id) {
+  return SERVICES.find((s) => s.id === id);
+}

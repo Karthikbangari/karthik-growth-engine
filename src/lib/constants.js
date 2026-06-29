@@ -1,13 +1,13 @@
 // ---------------------------------------------------------------------------
-// Central place to edit your details. Change these once and they update
-// everywhere across the whole site.
+// Central place to edit your contact details. Change these once and they
+// update everywhere across the whole site.
 // ---------------------------------------------------------------------------
 
 export const BRAND = {
-  name: "Karthik Bangari",
-  role: "DevOps & Cloud Engineer",
-  tagline:
-    "Building reliable, automated, and scalable cloud infrastructure.",
+  name: "Karthik Growth Engine",
+  short: "KG",
+  owner: "Karthik Bangari",
+  tagline: "Beautiful websites that bring you customers.",
 };
 
 export const CONTACT = {
@@ -17,7 +17,8 @@ export const CONTACT = {
   instagramHandle: "karthik bangari",
   instagramUrl: "https://instagram.com/karthikbangari", // <- confirm this is your exact handle
   email: "bangarikarthik22@gmail.com",
-  // Pre-filled WhatsApp message used by the contact buttons
-  defaultMessage:
-    "Hi Karthik, I saw your portfolio and I want to discuss a project.",
 };
+
+// Admin dashboard password (client-side gate only — see README for the security note).
+// Change this to your own secret before deploying.
+export const ADMIN_PASSWORD = "Karthik@1";
