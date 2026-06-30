@@ -10,8 +10,9 @@
   body {
     @apply bg-sand text-ink font-body antialiased;
     background-image:
-      radial-gradient(70% 50% at 15% -5%, rgba(107, 122, 58, 0.12), transparent 60%),
-      radial-gradient(60% 45% at 95% 5%, rgba(191, 157, 94, 0.12), transparent 60%),
+      radial-gradient(70% 50% at 12% -5%, rgba(18, 60, 53, 0.10), transparent 60%),
+      radial-gradient(65% 45% at 96% 0%, rgba(216, 183, 106, 0.18), transparent 60%),
+      radial-gradient(50% 40% at 80% 100%, rgba(244, 216, 206, 0.20), transparent 60%),
       theme("backgroundImage.grain");
     background-attachment: fixed;
   }
@@ -37,16 +38,16 @@
 @layer components {
   /* Glassmorphism card — layered highlight + soft depth, lifts on hover */
   .glass {
-    @apply rounded-2xl border border-white/60 bg-white/55 shadow-card backdrop-blur-md;
+    @apply rounded-2xl border border-gold/25 bg-white/70 shadow-card backdrop-blur-md;
     background-image: linear-gradient(
       180deg,
-      rgba(255, 255, 255, 0.45),
-      rgba(255, 255, 255, 0) 42%
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.1) 45%
     );
   }
   /* Opt-in hover for interactive glass cards */
   .glass-hover {
-    @apply transition-all duration-300 ease-out hover:-translate-y-1 hover:border-white/80 hover:shadow-lift;
+    @apply transition-all duration-300 ease-out hover:-translate-y-1 hover:border-gold/50 hover:shadow-lift;
   }
   .glass-dark {
     @apply rounded-2xl border border-white/10 bg-slate/90 text-sand shadow-soft backdrop-blur-md;
