@@ -47,7 +47,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-white/40 py-5 text-center text-xs text-ink/50">
-        © {new Date().getFullYear()} Karthik Growth Engine. Built to grow.
+        © {new Date().getFullYear()} Portfolio Designs. Built to grow.
       </div>
     </footer>
   );

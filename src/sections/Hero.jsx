@@ -15,16 +15,15 @@ const item = {
 
 const STATS = [
   { k: "Delivered in", v: "3–5 days", d: "Fast turnaround, no fuss." },
-  { k: "Pricing", v: "Tailored", d: "A custom quote, just for you." },
+  { k: "Your first step", v: "Free quote", d: "No payment until you love it." },
   { k: "Made for", v: "Mobile-first", d: "Looks great on every screen." },
 ];
 
 export default function Hero() {
   return (
     <section className="relative overflow-hidden">
-      {/* ambient two-tone glows */}
-      <div className="pointer-events-none absolute -top-24 left-1/4 h-72 w-[30rem] -translate-x-1/2 rounded-full bg-olive/20 blur-3xl" />
-      <div className="pointer-events-none absolute -top-10 right-0 h-64 w-[26rem] rounded-full bg-gold/15 blur-3xl" />
+      {/* soft wash behind the headline for crisp text over the global gradient */}
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-r from-sand/50 via-sand/5 to-transparent" />
 
       <div className="mx-auto max-w-6xl px-4 pb-14 pt-20 sm:px-6 sm:pt-28 lg:pt-32">
         <div className="grid items-center gap-12 lg:grid-cols-2">
@@ -36,35 +35,36 @@ export default function Hero() {
             className="text-center lg:text-left"
           >
             <motion.span variants={item} className="chip-gold mx-auto lg:mx-0">
-              <Sparkles size={13} /> Premium portfolio &amp; business websites
+              <Sparkles size={13} /> Welcome to Portfolio Designs
             </motion.span>
 
             <motion.h1
               variants={item}
               className="mt-6 font-display text-4xl font-bold leading-[1.08] tracking-[-0.01em] text-ink sm:text-5xl md:text-[3.4rem]"
             >
-              Get more customers with a{" "}
+              Your story deserves a website that{" "}
               <span className="relative whitespace-nowrap text-lux">
-                beautiful
+                sells
                 <svg className="absolute -bottom-2 left-0 w-full" height="10" viewBox="0 0 200 10" preserveAspectRatio="none">
                   <path
                     d="M2 7 Q100 0 198 6"
-                    stroke="#D8B76A"
+                    stroke="#F6B958"
                     strokeWidth="3"
                     fill="none"
                     strokeLinecap="round"
-                    opacity="0.7"
+                    opacity="0.85"
                     strokeDasharray="220"
                     className="animate-draw-underline"
                   />
                 </svg>
-              </span>{" "}
-              website
+              </span>
             </motion.h1>
 
             <motion.p variants={item} className="mx-auto mt-6 max-w-xl text-base text-ink/70 sm:text-lg lg:mx-0">
-              I craft career portfolios, wedding memory sites, business websites and landing pages
-              that look premium, load fast, and turn visitors into enquiries.
+              At Portfolio Designs, we create premium portfolio, wedding, and business websites
+              that look beautiful, load fast, and work perfectly on mobile. Every website is
+              designed to impress your visitors, build trust, and turn your story into real
+              customers.
             </motion.p>
 
             <motion.div variants={item} className="mt-8 flex flex-col items-center gap-3 sm:flex-row lg:items-start">

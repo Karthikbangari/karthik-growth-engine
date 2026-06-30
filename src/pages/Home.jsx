@@ -16,7 +16,7 @@ export default function Home() {
         <ScrollVelocity
           texts={[
             "Portfolio · Wedding · Business · Landing Pages ·",
-            "Mobile-first · Fast delivery · Made just for you ·",
+            "Loved by clients · Free quote · No upfront payment · Fast delivery ·",
           ]}
           velocity={40}
           className="text-olive-700/70"

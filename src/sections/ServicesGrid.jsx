@@ -11,8 +11,8 @@ export default function ServicesGrid({ heading = true }) {
       {heading && (
         <SectionHeading
           eyebrow="What I build"
-          title="Services"
-          subtitle="Pick what you need — every site is custom, mobile-first and ready to share."
+          title="Websites that grow your business"
+          subtitle="Pick what you need — every site is custom, mobile-first and built to turn visitors into paying customers."
         />
       )}
 

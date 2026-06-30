@@ -4,8 +4,8 @@
 // ---------------------------------------------------------------------------
 
 export const BRAND = {
-  name: "Karthik Growth Engine",
-  short: "KG",
+  name: "Portfolio Designs",
+  short: "PD",
   owner: "Karthik Bangari",
   tagline: "Beautiful websites that bring you customers.",
 };

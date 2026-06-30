@@ -6,13 +6,13 @@ export default function Logo({ withName = true, onClick }) {
   return (
     <Link to="/" onClick={onClick} className="group inline-flex items-center gap-2.5">
       <span className="grid h-9 w-9 place-items-center rounded-xl bg-olive font-display text-base font-bold text-sand shadow-olive transition group-hover:scale-105">
-        KG
+        PD
       </span>
       {withName && (
         <span className="flex flex-col leading-none">
-          <span className="font-display text-base font-bold text-ink">Karthik</span>
+          <span className="font-display text-base font-bold text-ink">Portfolio</span>
           <span className="font-grotesk text-[10px] font-semibold uppercase tracking-[0.18em] text-olive-600">
-            Growth Engine
+            Designs
           </span>
         </span>
       )}

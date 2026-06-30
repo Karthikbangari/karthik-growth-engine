@@ -10,7 +10,7 @@ export default function PricingCards() {
       <SectionHeading
         eyebrow="Packages"
         title="Pick your perfect package"
-        subtitle="Choose the option that fits you best — message me on WhatsApp and I'll share a custom quote."
+        subtitle="Start with a free quote — no payment until you love the design. Message me on WhatsApp and I'll tailor it to you."
       />
 
       <div className="mt-12 grid gap-6 md:grid-cols-3">
