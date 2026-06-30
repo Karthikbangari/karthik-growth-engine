@@ -1,12 +1,8 @@
-import { Suspense, lazy } from "react";
 import { motion } from "framer-motion";
 import { MessageCircle, ArrowRight, Sparkles, Star } from "lucide-react";
 import { waLink } from "../lib/whatsapp";
 import HeroShowcase from "../components/HeroShowcase";
 import Tilt from "../components/Tilt";
-
-// Lazy-load the Three.js showroom so it ships as its own chunk.
-const ThreeHeroScene = lazy(() => import("../components/ThreeHeroScene"));
 
 const fade = {
   hidden: {},
@@ -103,17 +99,15 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Right: realistic 3D luxury showroom (lazy) */}
+          {/* Right: warm 2D website showcase that tilts toward the cursor */}
           <motion.div
             initial={{ opacity: 0, y: 24, scale: 0.96 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="relative h-[380px] w-full sm:h-[460px] lg:h-[560px]"
+            className="relative grid w-full place-items-center py-6 sm:py-10"
           >
-            <div className="pointer-events-none absolute inset-0 -z-10 rounded-[2rem] bg-gradient-to-br from-gold/10 via-olive/10 to-transparent blur-2xl" />
-            <Suspense fallback={<div className="grid h-full place-items-center"><HeroShowcase /></div>}>
-              <ThreeHeroScene />
-            </Suspense>
+            <div className="pointer-events-none absolute inset-0 -z-10 rounded-[2rem] bg-gradient-to-br from-gold/15 via-olive/10 to-blush/20 blur-3xl" />
+            <HeroShowcase />
           </motion.div>
         </div>
 

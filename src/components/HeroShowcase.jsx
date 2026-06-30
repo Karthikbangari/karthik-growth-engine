@@ -9,6 +9,8 @@ const tiles = ["from-gold-light to-gold", "from-olive-200 to-olive-400", "from-s
 export default function HeroShowcase() {
   return (
     <div className="relative mx-auto w-full max-w-md [perspective:1200px]">
+      {/* soft stacked card behind — gives the centerpiece real depth in 2D */}
+      <div className="pointer-events-none absolute inset-x-6 -bottom-4 top-6 -z-10 rotate-3 rounded-3xl bg-gradient-to-br from-gold-light/60 to-olive-100/50 blur-[2px]" />
       <Tilt max={9} glare className="rounded-2xl">
         <div className="glass overflow-hidden rounded-2xl shadow-float3d">
           {/* browser chrome */}
